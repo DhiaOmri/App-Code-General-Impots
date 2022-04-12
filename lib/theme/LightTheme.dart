@@ -11,13 +11,13 @@ ThemeData light = ThemeData(
   canvasColor: ColorResources.COLOR_PRIMARY,
 
   shadowColor: Color(0xfffcf9f4),
-  backgroundColor: Color(0xffF4F7FC), // for background color
+  backgroundColor: Color(0xffF6F6F6), // for background color
   cardColor: Color(0xFFFFFFFF), // for surface color
-  primaryColor: Color(0xFFFE9B3F), // for primary color
+  primaryColor: Color(0xFF062A5F), // for primary color
   highlightColor: Color(0xFF1F1F1F), // for on background text
   focusColor: Color(0xFF1F1F1F), // for On Surface text color
-  dividerColor: Color(0xFF2A2A2A), // for Any line
-  errorColor: Color(0xFFFC6A57), // for error color
+  dividerColor: Colors.transparent, // for Any line
+  errorColor: Color(0xFFFC6Aff), // for error color
   primaryColorDark: Color(0xFFFFFFFF), // for on primary color
 
   textTheme: TextTheme(
@@ -32,7 +32,7 @@ ThemeData light = ThemeData(
         fontSize: Dimensions.FONT_SIZE_DEFAULT),
     headline3: TextStyle(
         fontWeight: FontWeight.w500,
-        color: ColorResources.COLOR_BLACK,
+        color: ColorResources.COLOR_PRIMARY,
         fontSize: Dimensions.FONT_SIZE_DEFAULT),
     headline4: TextStyle(
         fontWeight: FontWeight.w600,
@@ -40,7 +40,7 @@ ThemeData light = ThemeData(
         fontSize: Dimensions.FONT_SIZE_DEFAULT),
     headline5: TextStyle(
         fontWeight: FontWeight.w700,
-        color: ColorResources.COLOR_BLACK,
+        color: Color(0xFFC8102E),
         fontSize: Dimensions.FONT_SIZE_DEFAULT),
     headline6: TextStyle(
         fontWeight: FontWeight.w800,

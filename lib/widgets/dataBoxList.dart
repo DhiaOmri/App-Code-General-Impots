@@ -18,7 +18,10 @@ class DataBoxList extends StatelessWidget {
         return Column(
           children: [
             GestureDetector(
-              child: DataBox(item: items[index]),
+              child: DataBox(
+                item: items[index],
+                subdata: Datas,
+              ),
               onTap: () {
                 Navigator.push(
                   context,

@@ -1,9 +1,13 @@
 import 'package:code_general_impots/Providers/Data.dart';
+import 'package:code_general_impots/Providers/DataAr.dart';
 import 'package:code_general_impots/screen/scectionScreen.dart';
+import 'package:code_general_impots/utill/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DataBoxList2 extends StatelessWidget {
   final List<Data> items;
+
   final Future<List<Data>> Datas;
   const DataBoxList2({Key? key, required this.items, required this.Datas})
       : super(key: key);
@@ -18,7 +22,7 @@ class DataBoxList2 extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.topLeft,
             width: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.0),
@@ -48,10 +52,11 @@ class DataBoxList2 extends StatelessWidget {
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
-                                  color: Colors.amberAccent,
-                                  borderRadius: BorderRadius.circular(20)),
+                                color: Colors.amberAccent,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               child: Icon(
-                                Icons.book,
+                                FontAwesomeIcons.bookReader,
                                 color: Colors.white,
                               ),
                             ),
@@ -65,10 +70,9 @@ class DataBoxList2 extends StatelessWidget {
                           child: GestureDetector(
                             child: Text(
                               items[index].title,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.redAccent,
+                              style: rubikBold.copyWith(
+                                fontSize: 22,
+                                color: Theme.of(context).primaryColor,
                               ),
                             ),
                             onTap: () {

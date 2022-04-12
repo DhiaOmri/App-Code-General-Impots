@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:simple_html_css/simple_html_css.dart';
 
 class PostPage extends StatefulWidget {
-  final String posts;
   PostPage({required this.posts});
+  final String posts;
 
   @override
   _PostPageState createState() => _PostPageState();
@@ -13,8 +13,6 @@ class _PostPageState extends State<PostPage> {
   Widget postContent(htmlContent) {
     return RichText(
       text: HTML.toTextSpan(context, htmlContent),
-
-      //...
     );
   }
 
@@ -29,7 +27,7 @@ class _PostPageState extends State<PostPage> {
             SizedBox(height: 6),
             postContent(
               widget.posts,
-            )
+            ),
           ],
         ),
       ),

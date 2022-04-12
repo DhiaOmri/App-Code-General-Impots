@@ -1,6 +1,9 @@
+import 'package:code_general_impots/widget/recents.dart';
+
 import '../Providers/Data.dart';
 import '../widget/dataBoxList2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 class tab1 extends StatelessWidget {
   const tab1({
@@ -8,6 +11,7 @@ class tab1 extends StatelessWidget {
     required this.Datas,
   }) : super(key: key);
   final Future<List<Data>> Datas;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +38,8 @@ class tab1 extends StatelessWidget {
               fillColor: Colors.white,
               suffixIcon: Icon(Icons.search),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.redAccent, width: 2.0),
+                borderSide: BorderSide(
+                    color: Theme.of(context).primaryColor, width: 2.0),
                 borderRadius: BorderRadius.circular(25.0),
               ),
               enabledBorder: OutlineInputBorder(
@@ -74,6 +79,7 @@ class tab1 extends StatelessWidget {
             ],
           ),
         ),
+        Recents(),
       ],
     );
   }
